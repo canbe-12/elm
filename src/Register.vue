@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col">
-    <div class="p-2 text-center bg-blue text-white">用户注册</div>
+    <header class="text-center bg-blue-5 text-white py-4">
+      <p class="text-2xl">用户注册</p>
+    </header>
 
     <!-- 注册表单部分 -->
     <div class="form-container">
@@ -42,12 +44,16 @@
         <button @click="goToLogin" class="bg-grey text-black p-2">已有账号？去登录</button>
       </div>
     </div>
+
+    <HomeIcon style="fill: #333"/>
+
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { useRouter } from "vue-router";  // 导入 vue-router
+import { useRouter } from "vue-router";
+import HomeIcon from "@/icons/HomeIcon.vue";  // 导入 vue-router
 
 const router = useRouter();
 
@@ -80,6 +86,11 @@ const goToLogin = () => {
 </script>
 
 <style scoped>
+header {
+  background-color: #3498db;
+}
+
+
 .form-container {
   padding: 16px;
   border-radius: 8px;

@@ -1,23 +1,21 @@
 <script setup lang="ts">
 import HomeIcon from '@/icons/HomeIcon.vue';
-import { useRouter } from "vue-router"; // 引入 useRouter
+import { useRouter } from "vue-router";
 
-const router = useRouter();  // 使用 useRouter 获取路由实例
+const router = useRouter();
 
-// 点击按钮时跳转到注册页面
 const goToRegister = () => {
-  router.push({ name: "Register" });  // 使用路由名称跳转
+  router.push({ name: "Register" });
 };
 </script>
 
 <template>
   <div class="wrapper flex flex-col">
-    <!-- header部分 -->
-    <header class="text-center bg-blue text-white py-4">
+
+    <header class="text-center bg-blue-5 text-white py-4">
       <p class="text-2xl">用户登录</p>
     </header>
 
-    <!-- 表单部分 -->
     <div class="form-box px-4 py-6">
       <div class="mb-4">
         <label class="block text-lg">手机号码：</label>
@@ -34,12 +32,12 @@ const goToRegister = () => {
       </div>
 
       <div class="text-center">
-        <button  @click="goToRegister" class="bg-gray-200 text-black py-3 px-6 rounded-md">去注册</button>
+        <button  @click="goToRegister" class="bg-gray-200 text-black py-3 px-6 rounded-md">注册新用户</button>
       </div>
     </div>
 
-    <!-- 底部菜单部分 -->
-    <HomeIcon /> <!-- 引用底部导航按钮 -->
+
+    <HomeIcon style="fill: #333"/>
 
   </div>
 </template>
@@ -50,7 +48,7 @@ const goToRegister = () => {
 }
 
 header {
-  background-color: #2c3e50;
+  background-color: #3498db;
 }
 
 .form-box {
@@ -80,5 +78,9 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+button{
+  width: 100%;
 }
 </style>
