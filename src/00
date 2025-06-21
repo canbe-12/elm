@@ -1,0 +1,33 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <div class="flex flex-col h-full">
+    <div class="p-2 text-center bg-blue  text-white">用户登录</div>
+    <div class="grow">
+      <div class="p-2">
+        <label>手机号码：</label>
+        <input class="outline-0"/>
+      </div>
+      <div class="p-2">
+        <label>密码：</label>
+        <input type="password" class="outline-0"/>
+      </div>
+      <div class="p-2">
+        <button class="bg-#38CA73 text-white p-2 rounded w-[100%]">登陆</button>
+      </div>
+      <div class="p-2">
+        <button class="bg-gray-200 text-gray-700 p-2 rounded w-[100%]">注册新用户</button>
+      </div>
+    </div>
+    </div>
+    <div class="border border-t-gray-5 bg-gray-200 p-2"></div>
+
+      <div></div>
+
+</template>
+
+<style scoped>
+
+</style>

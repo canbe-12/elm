@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <HomeIcon style="fill: #333"/>
+    <Bottom style="fill: #333"/>
 
   </div>
 </template>
@@ -53,7 +53,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import HomeIcon from "@/icons/HomeIcon.vue";  // 导入 vue-router
+import Bottom from "@/components/Bottom.vue";  // 导入 vue-router
 
 const router = useRouter();
 

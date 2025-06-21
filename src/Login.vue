@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HomeIcon from '@/icons/HomeIcon.vue';
+import Bottom from '@/components/Bottom.vue';
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -10,7 +10,7 @@ const goToRegister = () => {
 </script>
 
 <template>
-  <div class="wrapper flex flex-col">
+  <div class="wrapper flex flex-col h-full px-4">
 
     <header class="text-center bg-blue-5 text-white py-4">
       <p class="text-2xl">用户登录</p>
@@ -37,7 +37,7 @@ const goToRegister = () => {
     </div>
 
 
-    <HomeIcon style="fill: #333"/>
+    <Bottom style="fill: #333"/>
 
   </div>
 </template>
