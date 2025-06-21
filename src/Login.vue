@@ -10,77 +10,52 @@ const goToRegister = () => {
 </script>
 
 <template>
-  <div class="wrapper flex flex-col h-full px-4">
+  <div class="flex flex-col min-h-screen">
 
-    <header class="text-center bg-blue-5 text-white py-4">
+    <header class="bg-[#3498db] text-white text-center py-4">
       <p class="text-2xl">用户登录</p>
     </header>
 
-    <div class="form-box px-4 py-6">
-      <div class="mb-4">
-        <label class="block text-lg">手机号码：</label>
-        <input type="text" class="w-full p-2 border rounded-md outline-none" placeholder="请输入手机号码"/>
+    <div class="flex-1 w-full px-4 py-6">
+
+      <div class="mb-6">
+        <label class="block text-lg mb-2">手机号码：</label>
+        <input
+            type="text"
+            placeholder="请输入手机号码"
+            class="w-full text-base p-4 border border-gray-300 rounded-md"
+        />
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-lg mb-2">密码：</label>
+        <input
+            type="password"
+            placeholder="请输入密码"
+            class="w-full text-base p-4 border border-gray-300 rounded-md"
+        />
       </div>
 
       <div class="mb-4">
-        <label class="block text-lg">密码：</label>
-        <input type="password" class="w-full p-2 border rounded-md outline-none" placeholder="请输入密码"/>
+        <button
+            class="bg-[#4caf50] text-white w-full text-lg py-4 rounded-md hover:opacity-80 transition-opacity"
+        >
+          登录
+        </button>
       </div>
 
-      <div class="mb-4">
-        <button class="bg-green text-white w-full py-3 rounded-md">登录</button>
+      <div>
+        <button
+            @click="goToRegister"
+            class="bg-[#f1f1f1] text-black w-full text-lg py-4 rounded-md hover:opacity-80 transition-opacity"
+        >
+          注册新用户
+        </button>
       </div>
 
-      <div class="text-center">
-        <button  @click="goToRegister" class="bg-gray-200 text-black py-3 px-6 rounded-md">注册新用户</button>
-      </div>
     </div>
 
-
-    <Bottom style="fill: #333"/>
+    <Bottom class="fill-[#333]" />
 
   </div>
 </template>
-
-<style scoped>
-.wrapper {
-  min-height: 100%;
-}
-
-header {
-  background-color: #3498db;
-}
-
-.form-box {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-button {
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-button.bg-green {
-  background-color: #27ae60;
-}
-
-button.bg-gray-200 {
-  background-color: #bdc3c7;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-button{
-  width: 100%;
-}
-</style>
