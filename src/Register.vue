@@ -33,7 +33,7 @@ const goToLogin = () => {
 <template>
   <div class="flex flex-col min-h-screen">
 
-    <header class="bg-[#3498db] text-white text-center py-4">
+    <header class="bg-sky-500 text-white text-center py-4">
       <p class="text-2xl">用户注册</p>
     </header>
 

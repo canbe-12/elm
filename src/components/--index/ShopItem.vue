@@ -27,7 +27,7 @@
         </div>
       </p>
 
-      <p class="inline-block border border-gray-300 text-gray-500 px-0.75 py-0.5 rounded text-xs">各种饺子</p>
+      <p class="inline-block border border-gray-300 text-gray-500 px-0.75 py-0.5 rounded text-xs">{{shop.tags}}</p>
 
       <p>
         <div class="flex items-center">
@@ -62,6 +62,7 @@ defineProps<{
     deliveryFee: number;
     distance: string;
     time: string;
+    tags: string;
   };
 }>();
 </script>
