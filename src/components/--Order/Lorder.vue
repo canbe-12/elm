@@ -1,3 +1,15 @@
+<script setup lang="ts">
+defineProps<{
+  item: {
+    img: string;
+    id: number;
+    name: string;
+    quantity: number;
+    price: number;
+  };
+}>();
+</script>
+
 <template>
   <div class="flex justify-between items-center mb-2">
     <div class="flex items-center">
@@ -15,14 +27,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-defineProps<{
-  item: {
-    img: string;
-    id: number;
-    name: string;
-    quantity: number;
-    price: number;
-  };
-}>();
-</script>
+<style scoped>
+
+</style>

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
   <div class="m-4">
     <div class="relative p-5 rounded-lg mb-1.5" style="background-color: #f5f5f5;">
@@ -23,6 +27,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<style scoped>
 
-</script>
+</style>

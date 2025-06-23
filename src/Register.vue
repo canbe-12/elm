@@ -5,21 +5,18 @@ import Bottom from "@/components/Bottom.vue";
 
 const router = useRouter();
 
-// 注册表单字段
 const phone = ref("");
 const password = ref("");
 const confirmPassword = ref("");
 const name = ref("");
 const gender = ref("男");  // 默认选男
 
-// 注册方法
 const register = () => {
   if (password.value !== confirmPassword.value) {
     alert("两次密码输入不一致，请重新输入！");
     return;
   }
 
-  // 注册逻辑处理（例如：调用API）
   alert("注册成功！");
 
   goToLogin();
@@ -29,6 +26,7 @@ const goToLogin = () => {
   router.push({ name: "Login" });
 };
 </script>
+
 
 <template>
   <div class="flex flex-col min-h-screen">
@@ -110,3 +108,7 @@ const goToLogin = () => {
 
   </div>
 </template>
+
+<style scoped>
+
+</style>

@@ -1,3 +1,18 @@
+<script setup lang="ts">
+defineProps<{
+  shop: {
+    id: number;
+    name: string;
+    img: string;
+    minPrice: number;
+    deliveryFee: number;
+    tags: string;
+    isNew?: boolean;
+  };
+}>()
+</script>
+
+
 <template>
   <div class="border-b border-gray-100">
     <div class="flex p-3">
@@ -18,16 +33,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-defineProps<{
-  shop: {
-    id: number;
-    name: string;
-    img: string;
-    minPrice: number;
-    deliveryFee: number;
-    tags: string;
-    isNew?: boolean;
-  };
-}>()
-</script>
+
+<style scoped>
+
+</style>

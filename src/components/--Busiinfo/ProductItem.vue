@@ -1,3 +1,29 @@
+<script setup lang="ts">
+import { defineProps } from 'vue';
+
+const props = defineProps<{
+  product: {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    quantity: number;
+    img: string;
+  };
+}>();
+
+const increaseQuantity = () => {
+  props.product.quantity++;
+};
+
+const decreaseQuantity = () => {
+  if (props.product.quantity > 0) {
+    props.product.quantity--;
+  }
+};
+</script>
+
+
 <template>
   <div class="flex justify-between items-center mb-4">
     <div class="flex items-center w-3/4">
@@ -28,27 +54,6 @@
 </template>
 
 
-<script setup lang="ts">
-import { defineProps } from 'vue';
+<style scoped>
 
-const props = defineProps<{
-  product: {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    quantity: number;
-    img: string;
-  };
-}>();
-
-const increaseQuantity = () => {
-  props.product.quantity++;
-};
-
-const decreaseQuantity = () => {
-  if (props.product.quantity > 0) {
-    props.product.quantity--;
-  }
-};
-</script>
+</style>

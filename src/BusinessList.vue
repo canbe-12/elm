@@ -1,23 +1,3 @@
-<template>
-  <div>
-    <header class="bg-sky-500 text-white text-center py-4">
-      <p class="text-2xl">商家列表</p>
-    </header>
-
-    <div class="min-h-screen pb-16">
-      <div class="bg-white">
-        <Shop
-            v-for="(shop, index) in shops"
-            :key="index"
-            :shop="shop"
-        />
-      </div>
-    </div>
-
-    <Bottom/>
-  </div>
-</template>
-
 <script setup lang="ts">
 import Shop from '@/components/--BusiList/Shop.vue'
 import Bottom from "@/components/Bottom.vue";
@@ -98,3 +78,28 @@ const shops = [
   }
 ]
 </script>
+
+
+<template>
+  <div>
+    <header class="bg-sky-500 text-white text-center py-4">
+      <p class="text-2xl">商家列表</p>
+    </header>
+
+    <div class="min-h-screen pb-16">
+      <div class="bg-white">
+        <Shop
+            v-for="(shop, index) in shops"
+            :key="index"
+            :shop="shop"
+        />
+      </div>
+    </div>
+
+    <Bottom/>
+  </div>
+</template>
+
+<style scoped>
+
+</style>

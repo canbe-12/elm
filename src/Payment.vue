@@ -1,3 +1,29 @@
+<script setup lang="ts">
+import {ref} from "vue";
+import { useRouter } from 'vue-router';
+import Bottom from "@/components/Bottom.vue";
+import OouiSuccess from '@/icons/success.vue';
+
+const router = useRouter();
+
+const order = {
+  name: '万家饺子（软件园E18店）',
+  totalPrice: 49
+};
+
+const paymentMethod = ref<null | string>(null);
+
+const togglePaymentMethod = (method: string) => {
+  paymentMethod.value = method === paymentMethod.value ? null : method;
+};
+
+const confirmPayment = () => {
+  alert('支付成功！');
+  router.push('/orderList');
+};
+</script>
+
+
 <template>
   <div>
     <header class="bg-sky-500 text-white text-center py-4">
@@ -52,27 +78,7 @@
   <Bottom/>
 </template>
 
-<script setup lang="ts">
-import {ref} from "vue";
-import { useRouter } from 'vue-router';
-import Bottom from "@/components/Bottom.vue";
-import OouiSuccess from '@/icons/success.vue';
 
-const router = useRouter();
+<style scoped>
 
-const order = {
-  name: '万家饺子（软件园E18店）',
-  totalPrice: 49
-};
-
-const paymentMethod = ref<null | string>(null);
-
-const togglePaymentMethod = (method: string) => {
-  paymentMethod.value = method === paymentMethod.value ? null : method;
-};
-
-const confirmPayment = () => {
-  alert('支付成功！');
-  router.push('/orderList');
-};
-</script>
+</style>

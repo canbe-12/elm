@@ -1,37 +1,3 @@
-<template>
-  <div class="bg-white min-h-screen pb-16">
-    <SearchBar />
-
-    <div class="grid grid-cols-5 gap-y-4 px-4 py-4">
-      <CategoryItem v-for="item in categories" :key="item.label" :img="item.img" :label="item.label" />
-    </div>
-
-    <PromoBanner />
-
-
-    <div class="px-1 mt-4">
-      <div class="m-4">
-
-        <div class="text-center mb-5">
-          <span class="text-lg font-bold text-gray-600">——</span>
-          <span class="ml-3 text-lg font-bold text-gray-600">推荐商家</span>
-          <span class="ml-3 text-lg font-bold text-gray-600">——</span>
-        </div>
-        <div class="flex justify-between items-center border-gray-200 pb-2">
-          <FilterOption label="综合排序" />
-          <FilterOption label="距离最近" />
-          <FilterOption label="销量最高" />
-          <FilterOption label="筛选" />
-        </div>
-      </div>
-      <ShopItem v-for="shop in shops" :key="shop.name" :shop="shop" />
-    </div>
-
-    <Bottom />
-
-  </div>
-</template>
-
 <script setup lang="ts">
 import SearchBar from '@/components/--index/SearchBar.vue';
 import CategoryItem from '@/components/--index/CategoryItem.vue';
@@ -155,6 +121,44 @@ const shops = [
   },
 ];
 </script>
+
+
+<template>
+  <div class="bg-white min-h-screen pb-16">
+    <SearchBar />
+
+    <div class="grid grid-cols-5 gap-y-4 px-4 py-4">
+      <CategoryItem v-for="item in categories" :key="item.label" :img="item.img" :label="item.label" />
+    </div>
+
+    <PromoBanner />
+
+
+    <div class="px-1 mt-4">
+      <div class="m-4">
+
+        <div class="text-center mb-5">
+          <span class="text-lg font-bold text-gray-600">——</span>
+          <span class="ml-3 text-lg font-bold text-gray-600">推荐商家</span>
+          <span class="ml-3 text-lg font-bold text-gray-600">——</span>
+        </div>
+        <div class="flex justify-between items-center border-gray-200 pb-2">
+          <FilterOption label="综合排序" />
+          <FilterOption label="距离最近" />
+          <FilterOption label="销量最高" />
+          <FilterOption label="筛选" />
+        </div>
+      </div>
+      <ShopItem
+          v-for="shop in shops"
+          :key="shop.name"
+          :shop="shop" />
+    </div>
+
+    <Bottom />
+
+  </div>
+</template>
 
 <style scoped>
 

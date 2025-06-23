@@ -1,3 +1,23 @@
+<script setup lang="ts">
+import {useRouter} from "vue-router";
+
+const router = useRouter();
+
+const goToOrder = () => {
+  router.push("/order");
+}
+
+defineProps<{
+  order: {
+    id: number;
+    name: string;
+    price: number;
+  };
+  isPaid: boolean;
+}>();
+</script>
+
+
 <template>
   <div class="flex justify-between items-center mb-2">
     <div class="flex items-center">
@@ -18,21 +38,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import {useRouter} from "vue-router";
+<style scoped>
 
-const router = useRouter();
-
-const goToOrder = () => {
-  router.push("/order");
-}
-
-defineProps<{
-  order: {
-    id: number;
-    name: string;
-    price: number;
-  };
-  isPaid: boolean;
-}>();
-</script>
+</style>

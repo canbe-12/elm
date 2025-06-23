@@ -1,3 +1,38 @@
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goPayment = () => {
+  router.push('/Payment');
+};
+
+import Lorder from '@/components/--Order/Lorder.vue'
+
+const orderItems = [
+  {
+    img: '/img/sp01.png',
+    id: 1,
+    name: '纯肉鲜肉（水饺）',
+    quantity: 2,
+    price: 15
+  },
+  {
+    id: 2,
+    img: '/img/sp02.png',
+    name: '玉米鲜肉（水饺）',
+    quantity: 1,
+    price: 16
+  }
+]
+
+const deliveryFee = 3;
+
+const totalPrice = orderItems.reduce((total, item) =>
+    total + item.price * item.quantity, 0) + deliveryFee;
+</script>
+
+
 <template>
   <div>
     <header class="bg-sky-500 text-white text-center py-4">
@@ -36,36 +71,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { useRouter } from 'vue-router';
+<style scoped>
 
-const router = useRouter();
-
-const goPayment = () => {
-  router.push('/Payment');
-};
-
-import Lorder from '@/components/--Order/Lorder.vue'
-
-const orderItems = [
-  {
-    img: '/img/sp01.png',
-    id: 1,
-    name: '纯肉鲜肉（水饺）',
-    quantity: 2,
-    price: 15
-  },
-  {
-    id: 2,
-    img: '/img/sp02.png',
-    name: '玉米鲜肉（水饺）',
-    quantity: 1,
-    price: 16
-  }
-]
-
-const deliveryFee = 3;
-
-const totalPrice = orderItems.reduce((total, item) =>
-    total + item.price * item.quantity, 0) + deliveryFee;
-</script>
+</style>

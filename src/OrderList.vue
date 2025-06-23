@@ -1,33 +1,3 @@
-<template>
-  <div>
-    <header class="bg-sky-500 text-white text-center py-4">
-      <p class="text-2xl">我的订单</p>
-    </header>
-
-    <div class="p-4">
-      <h2 class="text-lg font-bold mb-2">未支付订单信息：</h2>
-      <OrderItem
-          v-for="(unpaidOrder, index) in unpaidOrders"
-          :key="index"
-          :order="unpaidOrder"
-          :is-paid="false"
-      />
-    </div>
-
-    <div class="p-4">
-      <h2 class="text-lg font-bold mb-2">已支付订单信息：</h2>
-      <OrderItem
-          v-for="(paidOrder, index) in paidOrders"
-          :key="index"
-          :order="paidOrder"
-          :is-paid="true"
-      />
-    </div>
-
-    <Bottom />
-  </div>
-</template>
-
 <script setup lang="ts">
 import OrderItem from '@/components/--OrderList/OrderItem.vue';
 import Bottom from "@/components/Bottom.vue";
@@ -58,3 +28,39 @@ const paidOrders = [
   }
 ];
 </script>
+
+
+<template>
+  <div>
+    <header class="bg-sky-500 text-white text-center py-4">
+      <p class="text-2xl">我的订单</p>
+    </header>
+
+    <div class="p-4">
+      <h2 class="text-lg font-bold mb-2">未支付订单信息：</h2>
+      <OrderItem
+          v-for="(unpaidOrder, index) in unpaidOrders"
+          :key="index"
+          :order="unpaidOrder"
+          :is-paid="false"
+      />
+    </div>
+
+    <div class="p-4">
+      <h2 class="text-lg font-bold mb-2">已支付订单信息：</h2>
+      <OrderItem
+          v-for="(paidOrder, index) in paidOrders"
+          :key="index"
+          :order="paidOrder"
+          :is-paid="true"
+      />
+    </div>
+
+    <Bottom />
+  </div>
+</template>
+
+
+<style scoped>
+
+</style>

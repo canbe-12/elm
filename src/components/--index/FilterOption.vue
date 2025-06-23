@@ -1,3 +1,9 @@
+<script setup lang="ts">
+defineProps<{
+  label: string
+}>()
+</script>
+
 <template>
   <div class="flex items-center space-x-2">
     <span class="text-s text-gray-600">{{ label }}</span>
@@ -6,8 +12,6 @@
 </template>
 
 
-<script setup lang="ts">
-defineProps<{
-  label: string
-}>()
-</script>
+<style scoped>
+
+</style>

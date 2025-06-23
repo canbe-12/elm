@@ -1,3 +1,20 @@
+<script setup lang="ts">
+defineProps<{
+  shop: {
+    name: string;
+    img: string;
+    rating: number;
+    sales: number;
+    minPrice: number;
+    deliveryFee: number;
+    distance: string;
+    time: string;
+    tags: string;
+  };
+}>();
+</script>
+
+
 <template>
   <div class="flex p-6 border-b">
     <img :src="shop.img" class="w-20 h-20 rounded mr-3" />
@@ -51,18 +68,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-defineProps<{
-  shop: {
-    name: string;
-    img: string;
-    rating: number;
-    sales: number;
-    minPrice: number;
-    deliveryFee: number;
-    distance: string;
-    time: string;
-    tags: string;
-  };
-}>();
-</script>
+<style scoped>
+
+</style>
