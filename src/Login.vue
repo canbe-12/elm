@@ -38,7 +38,7 @@ const goToRegister = () => {
 
       <div class="mb-4">
         <button
-            class="bg-[#4caf50] text-white w-full text-lg py-4 rounded-md hover:opacity-80 transition-opacity"
+            class="bg-green-500 text-white w-full text-lg py-4 rounded-md hover:opacity-80"
         >
           登录
         </button>
@@ -47,7 +47,7 @@ const goToRegister = () => {
       <div>
         <button
             @click="goToRegister"
-            class="bg-[#f1f1f1] text-black w-full text-lg py-4 rounded-md hover:opacity-80 transition-opacity"
+            class="bg-gray-100 text-black w-full text-lg py-4 rounded-md hover:opacity-80"
         >
           注册新用户
         </button>
@@ -55,7 +55,7 @@ const goToRegister = () => {
 
     </div>
 
-    <Bottom class="fill-[#333]" />
+    <Bottom />
 
   </div>
 </template>

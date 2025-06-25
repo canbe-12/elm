@@ -110,7 +110,7 @@ const shop = ref({
 });
 const cartTotal = computed(() => {
   return shop.value.products.reduce((total, product) =>
-      total + product.price * product.quantity, 0);
+      total + product.price * product.quantity, 0 );
 });
 
 const totalQuantity = computed(() => {

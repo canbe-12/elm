@@ -88,7 +88,7 @@ const goToLogin = () => {
       <div class="mb-6">
         <button
             @click="register"
-            class="bg-[#4caf50] text-white w-full text-lg py-4 rounded-md cursor-pointer hover:opacity-80 transition-opacity"
+            class="bg-green-500 text-white w-full text-lg py-4 rounded-md cursor-pointer hover:opacity-80"
         >
           注册
         </button>
@@ -97,14 +97,14 @@ const goToLogin = () => {
       <div>
         <button
             @click="goToLogin"
-            class="bg-[#f1f1f1] text-black w-full text-lg py-4 rounded-md cursor-pointer hover:opacity-80 transition-opacity">
+            class="bg-gray-100 text-black w-full text-lg py-4 rounded-md cursor-pointer hover:opacity-80">
           已有账号？去登录
         </button>
       </div>
 
     </div>
 
-    <Bottom class="fill-[#333]" />
+    <Bottom />
 
   </div>
 </template>
